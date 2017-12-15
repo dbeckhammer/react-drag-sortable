@@ -57,6 +57,7 @@ class DragSortableList extends React.Component {
             if( noDrag ) parentNode = false;
           }
         }
+        if( mouseElement.classList.contains('drag-selector') ) noDrag = false;
         if( !noDrag ) {
           fun(event)
         } else {
