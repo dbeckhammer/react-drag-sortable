@@ -186,7 +186,9 @@ class DragSortableList extends React.Component {
     }
 
     if(type === 'dragged') {
-      style['display'] = 'none' // to avoid flicker effect when translate happens
+      style['position'] = 'absolute';
+      style['top'] = dragging.top+'px';
+      style['left'] = dragging.left+'px';
       style['zIndex'] = 10 // make sur it is on top
       classNames += ' dragged'
       return (
