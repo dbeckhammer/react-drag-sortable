@@ -37,9 +37,10 @@ const listGrid = [
 ]
 
 const listWithNoDrag = [
-	{content: (<div>test1<input type='text' className='no-drag'/></div>)},
- 	{content: (<div>test2<input type='text' className='no-drag'/></div>)},
- 	{content: (<div>test3<input type='text' className='no-drag'/></div>)},
+	{content: (<div>test1<div className='no-drag'><input type='text' /><strong>Testing</strong></div></div>)},
+	{content: (<div>test2<div className='no-drag'><input type='text' /><strong>Testing</strong></div></div>)},
+	{content: (<div>test3<div className='no-drag'><input type='text' /><strong>Testing</strong></div></div>)},
+	{content: (<div>test4<div className='no-drag'><input type='text' /><strong>Testing</strong></div></div>)},
 ]
 
 const listWithLinks = [
