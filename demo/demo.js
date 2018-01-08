@@ -53,10 +53,14 @@ const onSort = (sortedList, dropEvent) => {
   console.log("sortedList", sortedList, dropEvent);
 }
 
-ReactDOM.render(<DragSortableList items={list} moveTransitionDuration={0.3} onSort={onSort} type="vertical"/>, document.getElementById('example1'))
-ReactDOM.render(<DragSortableList items={listHorizontal} moveTransitionDuration={0.3} dropBackTransitionDuration={0.3} placeholder={placeholder} onSort={onSort} type="horizontal"/>, document.getElementById('example2'))
-ReactDOM.render(<DragSortableList items={listGrid} dropBackTransitionDuration={0.3} onSort={onSort} type="grid"/>, document.getElementById('example3'))
-ReactDOM.render(<DragSortableList items={listWithNoDrag} dropBackTransitionDuration={0.3} onSort={onSort}/>, document.getElementById('example4'))
+const onDrag = (dragEvent) => {
+  console.log("dragging", dragEvent);
+}
+
+ReactDOM.render(<DragSortableList items={list} moveTransitionDuration={0.3} onSort={onSort} onDrag={onDrag} type="vertical"/>, document.getElementById('example1'))
+ReactDOM.render(<DragSortableList items={listHorizontal} moveTransitionDuration={0.3} dropBackTransitionDuration={0.3} placeholder={placeholder} onSort={onSort} onDrag={onDrag} type="horizontal"/>, document.getElementById('example2'))
+ReactDOM.render(<DragSortableList items={listGrid} dropBackTransitionDuration={0.3} onSort={onSort} onDrag={onDrag} type="grid"/>, document.getElementById('example3'))
+ReactDOM.render(<DragSortableList items={listWithNoDrag} dropBackTransitionDuration={0.3} onSort={onSort} onDrag={onDrag}/>, document.getElementById('example4'))
 /*
-	ReactDOM.render(<DragSortableList items={listWithLinks} dropBackTransitionDuration={0.3} onSort={onSort} type="grid"/>, document.getElementById('example4'))
+	ReactDOM.render(<DragSortableList items={listWithLinks} dropBackTransitionDuration={0.3} onSort={onSort} onDrag={onDrag} type="grid"/>, document.getElementById('example4'))
 */

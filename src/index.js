@@ -226,6 +226,7 @@ class DragSortableList extends React.Component {
 
   _dragMove(event) {
     const target = event.target
+    const { onDrag } = this.props
     const { dragging } = this.state
 
     // Move copy of dragged element and keep the dragged position in the data-x/data-y attributes
@@ -264,6 +265,10 @@ class DragSortableList extends React.Component {
       })
     } else {
       this._movePlaceholder(event)
+    }
+
+    if(onDrag && isFunction(onDrag)) {
+      onDrag(event)
     }
   }
 
