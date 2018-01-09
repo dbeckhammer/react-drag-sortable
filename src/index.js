@@ -177,7 +177,7 @@ class DragSortableList extends React.Component {
     })
 
     return (
-      <div id={this.ref} className="List" ref={this.ref}>
+      <div id={this.ref} className={"List"+(dragging?" dragging":"")} ref={this.ref}>
         {itemsNodes}
       </div>
     )
