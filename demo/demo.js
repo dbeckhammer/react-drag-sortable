@@ -11,29 +11,29 @@ const placeholder = (
 )
 
 const list = [
- 	{content: (<span><strong className="drag-selector">test1</strong></span>), classes:['test', 'bigger']},
- 	{content: (<span><strong className="drag-selector">test2</strong></span>), classes:['test']},
- 	{content: (<span><strong className="drag-selector">test3</strong></span>), classes:['test']},
- 	{content: (<span><strong className="drag-selector">test4</strong></span>), classes:['test', 'bigger']}
+ 	{content: (<span>test1</span>), classes:['test', 'bigger']},
+ 	{content: (<span>test2</span>), classes:['test']},
+ 	{content: (<span>test3</span>), classes:['test']},
+ 	{content: (<span>test4</span>), classes:['test', 'bigger']}
 ]
 
 const listHorizontal = [
- 	{content: (<div><strong className="drag-selector">test1</strong></div>), classes:['bigger']},
- 	{content: (<div><strong className="drag-selector">test2</strong></div>)},
- 	{content: (<div><strong className="drag-selector">test3</strong></div>), classes:['bigger']},
- 	{content: (<div><strong className="drag-selector">test4</strong></div>)}
+ 	{content: (<div>test1</div>), classes:['bigger']},
+ 	{content: (<div>test2</div>)},
+ 	{content: (<div>test3</div>), classes:['bigger']},
+ 	{content: (<div>test4</div>)}
 ]
 
 const listGrid = [
-	{content: (<div><strong className="drag-selector">test1</strong></div>)},
- 	{content: (<div><strong className="drag-selector">test2</strong></div>)},
- 	{content: (<div><strong className="drag-selector">test3</strong></div>)},
-	{content: (<div><strong className="drag-selector">test4</strong></div>)},
-	{content: (<div><strong className="drag-selector">test5</strong></div>)},
-	{content: (<div><strong className="drag-selector">test6</strong></div>)},
-	{content: (<div><strong className="drag-selector">test7</strong></div>)},
-	{content: (<div><strong className="drag-selector">test8</strong></div>)},
- 	{content: (<div><strong className="drag-selector">test9</strong></div>)}
+	{content: (<div>test1</div>)},
+ 	{content: (<div>test2</div>)},
+ 	{content: (<div>test3</div>)},
+	{content: (<div>test4</div>)},
+	{content: (<div>test5</div>)},
+	{content: (<div>test6</div>)},
+	{content: (<div>test7</div>)},
+	{content: (<div>test8</div>)},
+ 	{content: (<div>test9</div>)}
 ]
 
 const listWithNoDrag = [

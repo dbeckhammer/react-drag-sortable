@@ -48,6 +48,17 @@ class DragSortableList extends React.Component {
       if(mouseElement) {
         var noDrag = mouseElement.classList.contains('no-drag');
         if( !noDrag ) {
+          var parentNode = this.getParentNode(mouseElement);
+          while( parentNode ){
+            if( typeof parentNode.classList!=="undefined" && parentNode.classList.length ) {
+              noDrag = parentNode.classList.contains('no-drag');              
+            }
+            parentNode = this.getParentNode(parentNode);              
+            if( noDrag ) parentNode = false;
+          }
+        }
+        if( mouseElement.classList.contains('drag-selector') ) noDrag = false;
+        if( !noDrag ) {
           fun(event)
         } else {
           interact.stop(event)
@@ -59,13 +70,6 @@ class DragSortableList extends React.Component {
     interact(draggableChildrenSelector).draggable({
       onmove: ignoreNoDrag(this._dragMove.bind(this)),
       onend: ignoreNoDrag(this._dragEnd.bind(this)),
-      allowFrom: '.drag-selector',
-      restrict: {
-        restriction: "parent",
-        endOnly: true,
-        elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-      },
-      autoScroll: true
     }).styleCursor(false)
     this._initItems(this.props);
   }
